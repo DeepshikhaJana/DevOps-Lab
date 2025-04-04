@@ -32,7 +32,10 @@ public class StudentAdmissionCLI {
             System.out.println("1. Add Student");
             System.out.println("2. Display Students");
             System.out.println("3. Search Student by ID");
-            System.out.println("4. Exit");
+            System.out.println("4. Add Student Grade");
+            System.out.println("5. Display Student Grades");
+            System.out.println("6. Calculate Student GPA");
+            System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -48,6 +51,15 @@ public class StudentAdmissionCLI {
                     searchStudentById();
                     break;
                 case 4:
+                    StudentGrades.addGrade();
+                    break;
+                case 5:
+                    StudentGrades.displayStudentGrades();
+                    break;
+                case 6:
+                    StudentGrades.calculateGPA();
+                    break;
+                case 7:
                     System.out.println("Exiting...");
                     return;
                 default:
